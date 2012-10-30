@@ -5,11 +5,10 @@ module Spree
     has_attached_file :attachment,
                 :url  => "/spree/banner/:id/:style_:basename.:extension",
                 :path => ":rails_root/public/spree/banner/:id/:style_:basename.:extension",
-                #:default_url => "/missing/:style.jpg",
-                :styles => lambda {|a|
-                      :thumbnail => "80x80#",
-                      :custom => "#{a.instance.attachment_width}x#{a.instance.attachment_height}#"
-                },
+                :styles => ->(a) { 
+                              { :thumbnail => "80x80#",
+                                :custom => "#{a.instance.attachment_width}x#{a.instance.attachment_height}#" }
+                            },
                 :convert_options => {
                       :thumbnail => "-gravity center"
                 }
