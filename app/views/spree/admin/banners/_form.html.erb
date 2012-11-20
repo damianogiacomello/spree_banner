@@ -1,9 +1,0 @@
-<%= f.inputs do %>
-	<%= f.input :category, :required => true, :label => t("banner.category") %>
-	<%= f.input :url, :label => t("banner.url") %>
-	<%= f.input :position, :label => t("banner.position") %>
-	<%= f.input :attachment_width, :required => true, :label => t("banner.attachment_width") %>
-	<%= f.input :attachment_height, :required => true, :label => t("banner.attachment_height") %>
-	<%= f.input :enabled, :label => t("banner.enabled") %>
-	<%= f.input :attachment, :required => true, :as => :file, :label => t("banner.image.one").capitalize, :hint => f.object.attachment.blank? ? f.template.content_tag(:span, t("banner.no_image")) : f.template.image_tag(f.object.attachment.url(:thumbnail)) %>
-<% end %>

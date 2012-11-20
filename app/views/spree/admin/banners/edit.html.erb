@@ -1,7 +1,0 @@
-<h1><%= t("banner.editing_banner") %></h1>
-<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @banner } %>
-
-<%= semantic_form_for([:admin, @banner]) do |f| %>
-<%= render :partial => "form", :locals => { :f => f } %>
-<%= render :partial => 'spree/admin/shared/edit_resource_links' %>
-<% end %>
