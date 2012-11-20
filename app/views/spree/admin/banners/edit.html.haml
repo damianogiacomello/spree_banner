@@ -1,0 +1,10 @@
+%fieldset
+  %legend
+    = t("banner.editing_banner")
+  = render :partial => 'spree/shared/error_messages', :locals => { :target => @banner }
+  #banner_edit_form
+    = semantic_form_for([:admin, @banner]) do |f|
+      .row
+        = render :partial => "form", :locals => { :f => f }
+      .form-buttons
+        = render :partial => 'spree/admin/shared/edit_resource_links'

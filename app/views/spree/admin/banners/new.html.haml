@@ -1,0 +1,8 @@
+%fieldset
+  %legend
+    = t("banner.new_banner")
+  = render :partial => 'spree/shared/error_messages', :locals => { :target => @banner }
+  = semantic_form_for([:admin, @banner], :html => { :enctype => "multipart/form-data" }) do |f|
+    = render :partial => "form", :locals => { :f => f }
+    .row
+      = render :partial => 'spree/admin/shared/new_resource_links'

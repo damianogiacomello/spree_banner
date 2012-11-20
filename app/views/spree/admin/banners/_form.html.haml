@@ -1,0 +1,43 @@
+- content_for :page_title do
+  = t("banner.many")
+
+.row.alpha.eight.column
+  = f.field_container :category do
+    = f.label :category, t("banner.category")
+    %span.required *
+    = f.text_field :category
+    = f.error_message_on :category
+
+  = f.field_container :url do
+    = f.label :url, t("banner.url")
+    = f.text_field :url
+    = f.error_message_on :url
+
+  = f.field_container :position do
+    = f.label :position, t("banner.position")
+    = f.text_field :position
+    = f.error_message_on :position
+
+  = f.field_container :attachment_width do
+    = f.label :attachment_width, t("banner.attachment_width")
+    %span.required *
+    = f.text_field :attachment_width
+    = f.error_message_on :attachment_width
+
+.row.omega.eight.column
+  = f.field_container :attachment_height do
+    = f.label :attachment_height, t("banner.attachment_height")
+    %span.required *
+    = f.text_field :attachment_height
+    = f.error_message_on :attachment_height
+
+  = f.field_container :enabled do
+    = f.label :enabled, t("banner.enabled")
+    = f.check_box :enabled
+    = f.error_message_on :enabled
+
+  = f.field_container :attachment do
+    = f.label :attachment, t("banner.attachment")
+    = f.file_field :attachment
+    = f.error_message_on :attachment
+    = f.object.attachment.blank? ? f.template.content_tag(:span, t("banner.no_image")) : f.template.image_tag(f.object.attachment.url(:thumbnail))
