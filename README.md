@@ -9,7 +9,7 @@ Basic Installation
 
 1. Add the following to your Gemfile
 <pre>
-  gem 'spree_banner', '~> 1.3.0'
+  gem 'spree_banner', '~> 2.0.0'
 </pre>
 2. Run `bundle install`
 3. To copy and apply migrations run:

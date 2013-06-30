@@ -10,6 +10,11 @@ module Spree
         redirect_to( :action => :edit )
       end
       
+      def update
+        @banner_box.enhance_settings
+        super
+      end
+
       def clone
         @new = @banner_box.duplicate
 
