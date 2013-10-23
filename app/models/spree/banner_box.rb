@@ -1,6 +1,6 @@
 module Spree
   class BannerBox < ActiveRecord::Base
-    attr_accessible :presentation, :url, :category, :position, :enabled, :attachment
+    #attr_accessible :presentation, :url, :category, :position, :enabled, :attachment
     
     has_attached_file :attachment,
                 :url  => "/spree/banners/:id/:style_:basename.:extension",

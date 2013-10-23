@@ -1,0 +1,43 @@
+ru:
+  images_only: "должен быть JPG, JPEG, PNG или GIF"
+  banner_box_settings: "Настройки Баннеров"
+  add_new_banner_style: "Добавить Новый Стиль Баннеров"
+  banner_box_settings_warning: "Вам нужно перегенерировать миниатюры изображений, если вы обновите стили paperclip. Используйте rake paperclip:refresh:thumbnails CLASS=Spree::Banner для этого."
+  banner_settings_description: "Описание настроек баннеров"
+  banner_settings_updated: "Настройки Баннеров успешно обновлены."
+  banner_default_style: "Путь к Баннерам по умолчанию"
+  banner_default_url: "URL по умолчанию"
+  banner_path: "Путь к Баннерам"
+  banner_styles: "Стили Баннера"
+  general_settings: "Основные настройки"
+  banner_url: "URL Баннеров"
+  back_to_banner_boxes_list: "Назад к списку баннеров"
+  new_banner_box: "Новый Баннер"
+  listing_banner_boxes: "Баннеры"
+  enabled: Включен?
+  url: Ссылка
+  attachment: Изображение
+  alt_text: Текст
+  thumbnail: Миниатюра
+  category: Категория
+  banner_boxes: Баннеры
+  banner_box: Баннер
+  notice_messages:
+    banner_box_cloned: "Баннер скопирован"
+    banner_box_not_cloned: "Баннер не может быть скопирован"
+  spree:
+    admin:
+      tab:
+        banner_boxes: "Баннеры"
+        banner_box_settings: "Настройки Баннеров"
+  activerecord:
+    models:
+      spree/banner_box:
+        one: Баннер
+        other: Баннеры
+    attributes:
+      spree/banner_box:
+        category: Категория
+        updated_at: Дата изменения
+        created_at: Дата создания
+        enabled: Включен?
