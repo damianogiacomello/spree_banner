@@ -1,8 +1,9 @@
 en:
+  destroy: 'Delete'
   images_only: "deve essere JPG, JPEG, PNG o GIF"
   banner_box_settings: "Banner Settings"
   add_new_banner_style: "Add New Banner Style"
-  banner_box_settings_warning: "You will need to regenerate thumbnails if you update the paperclip styles. Use rake paperclip:refresh:thumbnails CLASS=Spree::Banner to do this."
+  banner_box_settings_warning: "You will need to regenerate thumbnails if you update the paperclip styles. Use rake paperclip:refresh:thumbnails CLASS=Spree::BannerBox to do this."
   banner_settings_description: "Banner Settings Description"
   banner_settings_updated: "Banner Settings successfully updated."
   banner_default_style: "Banner Default Style"

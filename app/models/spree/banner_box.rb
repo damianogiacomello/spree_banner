@@ -1,6 +1,5 @@
 module Spree
   class BannerBox < ActiveRecord::Base
-    attr_accessible :alt_text, :url, :category, :position, :enabled, :attachment
 
     has_attached_file :attachment,
                 :url  => "/spree/banners/:id/:style_:basename.:extension",
@@ -27,10 +26,6 @@ module Spree
         where(:enabled => true).where(:category => categories)
       end
     }
-
-    # Load user defined paperclip settings
-    include Spree::Core::S3Support
-    supports_s3 :attachment
 
     Spree::BannerBox.attachment_definitions[:attachment][:styles] = ActiveSupport::JSON.decode(SpreeBanner::Config[:banner_styles]).symbolize_keys!
     Spree::BannerBox.attachment_definitions[:attachment][:path] = SpreeBanner::Config[:banner_path]
